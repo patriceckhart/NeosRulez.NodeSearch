@@ -1,0 +1,8 @@
+prototype(NeosRulez.NodeSearch:Content.SearchResult) < prototype(Neos.Neos:ContentComponent) {
+
+    renderer = afx`
+        <NeosRulez.NodeSearch:Component.AbstractContent>
+            <NeosRulez.NodeSearch:Component.SearchResult />
+        </NeosRulez.NodeSearch:Component.AbstractContent>
+    `
+}

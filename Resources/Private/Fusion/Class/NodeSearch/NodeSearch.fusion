@@ -1,0 +1,5 @@
+prototype(NeosRulez.NodeSearch:Class.NodeSearch) {
+    @class = 'NeosRulez\\NodeSearch\\Fusion\\NodeSearchFusion'
+    searchterm = false
+    currentNode = false
+}

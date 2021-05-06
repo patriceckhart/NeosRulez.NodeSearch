@@ -1,0 +1,16 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.NodeSearch: true
+    nodeTypes:
+      groups:
+        neosrulezNodeSearch:
+          position: 'end'
+          label: Search
+#NeosRulez:
+#  NodeSearch:
+#    ignoredNodetypes:
+#      values:
+#        - 'Acme.Package:Document.Category'
+#        - 'Acme.Site:Document.404'

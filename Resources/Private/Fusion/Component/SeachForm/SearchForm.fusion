@@ -1,0 +1,23 @@
+prototype(NeosRulez.NodeSearch:Component.SearchForm) < prototype(Neos.Fusion:Component) {
+    @context.resultTargetPage = ${this.resultTarget}
+    resultTargetUri = Neos.Neos:NodeUri {
+        node = ${resultTargetPage}
+    }
+
+    renderer = afx`
+        <div class="nodesearch-form">
+            <form action={props.resultTargetUri} method="get">
+                <div class="row align-items-center">
+                    <div class="col-10">
+                        <input attributes.id="searchterm" name="s" class="form-control" placeholder="Searchterm" required="required" />
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    `
+}

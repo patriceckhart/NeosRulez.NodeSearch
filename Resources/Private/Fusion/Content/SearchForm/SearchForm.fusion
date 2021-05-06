@@ -1,0 +1,9 @@
+prototype(NeosRulez.NodeSearch:Content.SearchForm) < prototype(Neos.Neos:ContentComponent) {
+    resultTarget = ${node.properties.resultTarget}
+
+    renderer = afx`
+        <NeosRulez.NodeSearch:Component.AbstractContent>
+            <NeosRulez.NodeSearch:Component.SearchForm resultTarget={props.resultTarget} />
+        </NeosRulez.NodeSearch:Component.AbstractContent>
+    `
+}

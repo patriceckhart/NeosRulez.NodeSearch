@@ -1,0 +1,22 @@
+'NeosRulez.NodeSearch:Content.SearchForm':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    group: neosrulezNodeSearch
+    label: Search form
+    icon: fas fa-search
+    position: 1
+    inspector:
+      groups:
+        neosrulezNodeSearchSearchForm:
+          label: Search form
+          icon: fas fa-search
+  properties:
+    resultTarget:
+      type: reference
+      ui:
+        label: Result target
+        reloadPageIfChanged: true
+        inspector:
+          group: neosrulezNodeSearchSearchForm
+          position: 1

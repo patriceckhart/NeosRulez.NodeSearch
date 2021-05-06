@@ -1,0 +1,43 @@
+prototype(NeosRulez.NodeSearch:Component.SearchResult) < prototype(Neos.Fusion:Component) {
+
+    @context.searchTerm = ${request.arguments.s ? request.arguments.s : false}
+    result = NeosRulez.NodeSearch:Class.NodeSearch {
+        searchterm = ${searchTerm}
+        currentNode = ${node}
+    }
+    length = ${this.result ? Array.length(this.result) : false}
+
+    renderer = afx`
+        <div class="nodesearch-result">
+            <p>Your search for <strong>"{searchTerm}"</strong> resulted in the following hits ({props.length}):</p>
+            <Neos.Fusion:Loop @if.render={props.result} items={props.result} itemName="item">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <Neos.Neos:NodeLink node={item.documentNode}>
+                                {item.documentNode.properties.title}
+                            </Neos.Neos:NodeLink>
+                        </p>
+                        <p>{item.findString}</p>
+                    </div>
+                </div>
+            </Neos.Fusion:Loop>
+            <p @if.render={!props.result}>No result.</p>
+        </div>
+    `
+
+    @cache {
+        mode = 'dynamic'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryDiscriminator = ${request.arguments.s}
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+        }
+    }
+}

@@ -1,0 +1,8 @@
+prototype(NeosRulez.NodeSearch:Component.AbstractContent) < prototype(Neos.Fusion:Component) {
+    content = ''
+    renderer = afx`
+        <div class="neosrulez-nodesearch">
+            {props.content}
+        </div>
+    `
+}
