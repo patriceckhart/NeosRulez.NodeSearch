@@ -3,19 +3,19 @@
     'Neos.Neos:Content': true
   ui:
     group: neosrulezNodeSearch
-    label: Search form
+    label: i18n
     icon: fas fa-search
     position: 1
     inspector:
       groups:
         neosrulezNodeSearchSearchForm:
-          label: Search form
+          label: NeosRulez.NodeSearch:NodeTypes.Content.SearchForm:ui.label
           icon: fas fa-search
   properties:
     resultTarget:
       type: reference
       ui:
-        label: Result target
+        label: i18n
         reloadPageIfChanged: true
         inspector:
           group: neosrulezNodeSearchSearchForm

@@ -9,7 +9,7 @@ prototype(NeosRulez.NodeSearch:Component.SearchResult) < prototype(Neos.Fusion:C
 
     renderer = afx`
         <div class="nodesearch-result">
-            <p>Your search for <strong>"{searchTerm}"</strong> resulted in the following hits ({props.length}):</p>
+            <p @if.render={props.result}>{I18n.translate('NeosRulez.NodeSearch:NodeTypes.Component.SearchResult:content.searchresult.msg.1')} <strong>"{searchTerm}"</strong> {I18n.translate('NeosRulez.NodeSearch:NodeTypes.Component.SearchResult:content.searchresult.msg.2')} ({props.length}):</p>
             <Neos.Fusion:Loop @if.render={props.result} items={props.result} itemName="item">
                 <div class="row">
                     <div class="col-12">
@@ -22,7 +22,7 @@ prototype(NeosRulez.NodeSearch:Component.SearchResult) < prototype(Neos.Fusion:C
                     </div>
                 </div>
             </Neos.Fusion:Loop>
-            <p @if.render={!props.result}>No result.</p>
+            <p @if.render={!props.result}>{I18n.translate('NeosRulez.NodeSearch:NodeTypes.Component.SearchResult:content.searchresult.msg.3')}</p>
         </div>
     `
 

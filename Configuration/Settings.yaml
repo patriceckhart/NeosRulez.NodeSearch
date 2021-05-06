@@ -3,11 +3,19 @@ Neos:
     fusion:
       autoInclude:
         NeosRulez.NodeSearch: true
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.NodeSearch:
+            - Main
+            - 'NodeTypes/*'
+            - 'NodeTypes/Content/*'
+            - 'NodeTypes/Component/*'
     nodeTypes:
       groups:
         neosrulezNodeSearch:
           position: 'end'
-          label: Search
+          label: NeosRulez.NodeSearch:Main:neosrulezNodeSearch
 #NeosRulez:
 #  NodeSearch:
 #    ignoredNodetypes:

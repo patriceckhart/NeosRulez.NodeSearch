@@ -9,11 +9,11 @@ prototype(NeosRulez.NodeSearch:Component.SearchForm) < prototype(Neos.Fusion:Com
             <form action={props.resultTargetUri} method="get">
                 <div class="row align-items-center">
                     <div class="col-10">
-                        <input attributes.id="searchterm" name="s" class="form-control" placeholder="Searchterm" required="required" />
+                        <input attributes.id="searchterm" name="s" class="form-control" placeholder={I18n.translate('NeosRulez.NodeSearch:NodeTypes.Component.SearchForm:content.searchterm')} required="required" />
                     </div>
                     <div class="col-2">
                         <button type="submit" class="btn btn-primary w-100">
-                            <i class="fas fa-search"></i>
+                            {I18n.translate('NeosRulez.NodeSearch:NodeTypes.Component.SearchForm:content.btnLabel')}
                         </button>
                     </div>
                 </div>

@@ -3,11 +3,6 @@
     'Neos.Neos:Content': true
   ui:
     group: neosrulezNodeSearch
-    label: Search result
+    label: i18n
     icon: fas fa-search
     position: 2
-    inspector:
-      groups:
-        neosrulezNodeSearchSearchForm:
-          label: Search result
-          icon: fas fa-search
