@@ -3,23 +3,25 @@ namespace NeosRulez\NodeSearch\Fusion;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
+use NeosRulez\NodeSearch\Domain\Service\NodeSearchService;
 
-class NodeSearchFusion extends AbstractFusionObject {
+class NodeSearchFusion extends AbstractFusionObject
+{
 
     /**
      * @Flow\Inject
-     * @var \NeosRulez\NodeSearch\Domain\Service\NodeSearchService
+     * @var NodeSearchService
      */
     protected $nodeSearchService;
 
     /**
-     * @return void
+     * @return array
      */
-    public function evaluate() {
-        $searchterm = $this->fusionValue('searchterm');
+    public function evaluate(): array
+    {
+        $searchTerm = $this->fusionValue('searchterm');
         $currentNode = $this->fusionValue('currentNode');
-        $result = $this->nodeSearchService->search($searchterm, $currentNode);
-        return $result;
+        return $this->nodeSearchService->search($searchTerm, $currentNode);
     }
 
 }

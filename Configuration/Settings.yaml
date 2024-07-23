@@ -16,6 +16,23 @@ Neos:
         neosrulezNodeSearch:
           position: 'end'
           label: NeosRulez.NodeSearch:Main:neosrulezNodeSearch
+    modules:
+      search:
+        label: NeosRulez.NodeSearch:Main:neosrulezNodeSearch
+        controller: '\Neos\Neos\Controller\Module\ManagementController'
+        description: NeosRulez.NodeSearch:Main:neosrulezNodeSearch
+        icon: 'fas fa-search'
+        resource: 'Neos_Neos_Backend_Module_Management'
+        submodules:
+          searchterm:
+            label: NeosRulez.NodeSearch:Main:searchTerms
+            controller: '\NeosRulez\NodeSearch\Controller\Module\SearchTermController'
+            description: NeosRulez.NodeSearch:Main:searchTerms
+            icon: 'fas fa-search'
+            actions:
+              index:
+                label: NeosRulez.NodeSearch:Main:searchTerms
+                title: NeosRulez.NodeSearch:Main:searchTerms
 #NeosRulez:
 #  NodeSearch:
 #    ignoredNodetypes:

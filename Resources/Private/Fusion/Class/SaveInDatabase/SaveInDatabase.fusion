@@ -1,0 +1,6 @@
+prototype(NeosRulez.NodeSearch:Class.SaveInDatabase) {
+    @class = 'NeosRulez\\NodeSearch\\Fusion\\SaveInDatabaseFusion'
+    searchterm = false
+    saveInDatabase = false
+    searchCount = 0
+}

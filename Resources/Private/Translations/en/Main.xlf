@@ -5,6 +5,27 @@
             <trans-unit id="neosrulezNodeSearch" xml:space="preserve">
 				<source>Search</source>
 			</trans-unit>
+            <trans-unit id="searchTerms" xml:space="preserve">
+				<source>Search terms used</source>
+			</trans-unit>
+            <trans-unit id="searchTerm" xml:space="preserve">
+				<source>Search term</source>
+			</trans-unit>
+            <trans-unit id="searchResults" xml:space="preserve">
+				<source>Search result</source>
+			</trans-unit>
+            <trans-unit id="dateTime" xml:space="preserve">
+				<source>Date and time</source>
+			</trans-unit>
+            <trans-unit id="noItems" xml:space="preserve">
+				<source>No saved searches</source>
+			</trans-unit>
+            <trans-unit id="deleteConfirmation" xml:space="preserve">
+				<source>Remove all?</source>
+			</trans-unit>
+            <trans-unit id="deleteAll" xml:space="preserve">
+				<source>Remove all</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

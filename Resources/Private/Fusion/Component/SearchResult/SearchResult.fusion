@@ -7,7 +7,10 @@ prototype(NeosRulez.NodeSearch:Component.SearchResult) < prototype(Neos.Fusion:C
     }
     length = ${this.result ? Array.length(this.result) : false}
 
+    saveInDatabase = ${q(node).property('saveInDatabase')}
+
     renderer = afx`
+        <NeosRulez.NodeSearch:Class.SaveInDatabase searchterm={searchTerm} saveInDatabase={props.saveInDatabase} searchCount={props.length} />
         <div class="nodesearch-result">
             <p @if.render={props.result}>{I18n.translate('NeosRulez.NodeSearch:NodeTypes.Component.SearchResult:content.searchresult.msg.1')} <strong>"{searchTerm}"</strong> {I18n.translate('NeosRulez.NodeSearch:NodeTypes.Component.SearchResult:content.searchresult.msg.2')} ({props.length}):</p>
             <Neos.Fusion:Loop @if.render={props.result} items={props.result} itemName="item">

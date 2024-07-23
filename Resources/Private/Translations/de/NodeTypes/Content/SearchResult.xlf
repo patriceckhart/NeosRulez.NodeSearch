@@ -5,6 +5,9 @@
             <trans-unit id="ui.label" xml:space="preserve">
 				<source>Suchergebnis</source>
 			</trans-unit>
+            <trans-unit id="properties.saveInDatabase" xml:space="preserve">
+				<source>Verwendeten Suchbegriff in Datenbank speichern</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

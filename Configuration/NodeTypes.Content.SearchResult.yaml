@@ -6,3 +6,17 @@
     label: i18n
     icon: fas fa-search
     position: 2
+    inspector:
+      groups:
+        neosrulezNodeSearchSearchResult:
+          label: NeosRulez.NodeSearch:NodeTypes.Content.SearchResult:ui.label
+          icon: fas fa-search
+  properties:
+    saveInDatabase:
+      type: boolean
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: neosrulezNodeSearchSearchResult
+          position: 1
