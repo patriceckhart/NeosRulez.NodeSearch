@@ -1,6 +1,7 @@
 <?php
 namespace NeosRulez\NodeSearch\Fusion;
 
+use Neos\ContentRepository\Domain\Model\Node;
 use Neos\Flow\Annotations as Flow;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
 use NeosRulez\NodeSearch\Domain\Service\NodeSearchService;
@@ -19,9 +20,31 @@ class NodeSearchFusion extends AbstractFusionObject
      */
     public function evaluate(): array
     {
-        $searchTerm = $this->fusionValue('searchterm');
-        $currentNode = $this->fusionValue('currentNode');
-        return $this->nodeSearchService->search($searchTerm, $currentNode);
+        return $this->nodeSearchService->search($this->getSearchTerm(), $this->getCurrentNode(), $this->getSelectedNodeTypes());
+    }
+
+    /**
+     * @return string
+     */
+    private function getSearchTerm(): string
+    {
+        return $this->fusionValue('searchterm');
+    }
+
+    /**
+     * @return Node
+     */
+    private function getCurrentNode(): Node
+    {
+        return $this->fusionValue('currentNode');
+    }
+
+    /**
+     * @return array|bool
+     */
+    private function getSelectedNodeTypes(): array|bool
+    {
+        return $this->fusionValue('selectedNodeTypes');
     }
 
 }

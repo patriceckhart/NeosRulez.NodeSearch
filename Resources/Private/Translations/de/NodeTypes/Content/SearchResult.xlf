@@ -8,6 +8,9 @@
             <trans-unit id="properties.saveInDatabase" xml:space="preserve">
 				<source>Verwendeten Suchbegriff in Datenbank speichern</source>
 			</trans-unit>
+            <trans-unit id="properties.selectedNodeTypes" xml:space="preserve">
+				<source>Nur ausgewählte NodeTypes durchsuchen</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

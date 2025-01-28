@@ -4,6 +4,7 @@ prototype(NeosRulez.NodeSearch:Component.SearchResult) < prototype(Neos.Fusion:C
     result = NeosRulez.NodeSearch:Class.NodeSearch {
         searchterm = ${searchTerm}
         currentNode = ${node}
+        selectedNodeTypes = ${q(node).property('selectedNodeTypes')}
     }
     length = ${this.result ? Array.length(this.result) : false}
 

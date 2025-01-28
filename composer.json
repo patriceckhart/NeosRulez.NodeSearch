@@ -3,7 +3,8 @@
     "type": "neos-package",
     "name": "neosrulez/nodesearch",
     "require": {
-        "neos/neos": "*"
+        "php": "8.0.* || 8.1.* || 8.2.* || 8.3.*",
+        "neos/neos": "^7.0 || ^8.0 || ^8.1"
     },
     "autoload": {
         "psr-4": {
