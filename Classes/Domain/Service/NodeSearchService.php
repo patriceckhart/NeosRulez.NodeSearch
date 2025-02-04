@@ -42,10 +42,10 @@ class NodeSearchService {
     /**
      * @param string $searchParameter
      * @param Node $currentNode
-     * @param array|bool $selectedNodeTypes
+     * @param array|bool|null $selectedNodeTypes
      * @return array
      */
-    public function search(string $searchParameter, Node $currentNode, array|bool $selectedNodeTypes = false): array
+    public function search(string $searchParameter, Node $currentNode, array|bool|null $selectedNodeTypes = false): array
     {
         $results = [];
         if($searchParameter !== '') {

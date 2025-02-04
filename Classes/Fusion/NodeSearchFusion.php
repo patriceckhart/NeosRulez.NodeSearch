@@ -40,9 +40,9 @@ class NodeSearchFusion extends AbstractFusionObject
     }
 
     /**
-     * @return array|bool
+     * @return array|bool|null
      */
-    private function getSelectedNodeTypes(): array|bool
+    private function getSelectedNodeTypes(): array|bool|null
     {
         return $this->fusionValue('selectedNodeTypes');
     }
